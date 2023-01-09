@@ -75,7 +75,6 @@ class TestAmenity(unittest.TestCase):
     """
     Test the Amenity class
     """
-
     def test_is_subclass(self):
         """
         Test that Amenity is a subclass of BaseModel
@@ -99,7 +98,7 @@ class TestAmenity(unittest.TestCase):
 
     def test_to_dict_creates_dict(self):
         """
-        test to_dict method creates a dictionary with proper attrs
+        Test to_dict method creates a dictionary with proper attrs
         """
         am = Amenity()
         print(am.__dict__)
@@ -113,7 +112,7 @@ class TestAmenity(unittest.TestCase):
 
     def test_to_dict_values(self):
         """
-        test that values in dict returned from to_dict are correct
+        Test that values in dict returned from to_dict are correct
         """
         t_format = "%Y-%m-%dT%H:%M:%S.%f"
         am = Amenity()
@@ -126,7 +125,7 @@ class TestAmenity(unittest.TestCase):
 
     def test_str(self):
         """
-        test that the str method has the correct output
+        Test that the str method has the correct output
         """
         amenity = Amenity()
         string = "[Amenity] ({}) {}".format(amenity.id, amenity.__dict__)
