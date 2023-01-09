@@ -75,7 +75,6 @@ class TestCity(unittest.TestCase):
     """
     Test the City class
     """
-
     def test_is_subclass(self):
         """
         Test that City is a subclass of BaseModel
@@ -110,7 +109,7 @@ class TestCity(unittest.TestCase):
 
     def test_to_dict_creates_dict(self):
         """
-        test to_dict method creates a dictionary with proper attrs
+        Test to_dict method creates a dictionary with proper attrs
         """
         c = City()
         new_d = c.to_dict()
@@ -123,7 +122,7 @@ class TestCity(unittest.TestCase):
 
     def test_to_dict_values(self):
         """
-        test that values in dict returned from to_dict are correct
+        Test that values in dict returned from to_dict are correct
         """
         t_format = "%Y-%m-%dT%H:%M:%S.%f"
         c = City()
@@ -136,7 +135,7 @@ class TestCity(unittest.TestCase):
 
     def test_str(self):
         """
-        test that the str method has the correct output
+        Test that the str method has the correct output
         """
         city = City()
         string = "[City] ({}) {}".format(city.id, city.__dict__)
