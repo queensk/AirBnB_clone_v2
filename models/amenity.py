@@ -1,18 +1,18 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 """
-State Module for HBNB project
+Holds class Amenity
 """
 import models
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from os import getenv
 import sqlalchemy
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 
 
-class Amenity(BaseModel):
+class Amenity(BaseModel, Base):
     """
-    Amenity model definition
+    Representation of Amenity
     """
     if models.storage_t == 'db':
         __tablename__ = 'amenities'
@@ -22,6 +22,6 @@ class Amenity(BaseModel):
 
     def __init__(self, *args, **kwargs):
         """
-        initializes Amenity
+        Initializes Amenity
         """
         super().__init__(*args, **kwargs)
