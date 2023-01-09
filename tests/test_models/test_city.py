@@ -75,6 +75,7 @@ class TestCity(unittest.TestCase):
     """
     Test the City class
     """
+
     def test_is_subclass(self):
         """
         Test that City is a subclass of BaseModel

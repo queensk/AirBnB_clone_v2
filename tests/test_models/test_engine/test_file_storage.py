@@ -99,7 +99,7 @@ class TestFileStorage(unittest.TestCase):
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_new(self):
         """
-        test that new adds an object to the FileStorage.__objects attr
+        Test that new adds an object to the FileStorage.__objects attr
         """
         storage = FileStorage()
         save = FileStorage._FileStorage__objects
