@@ -55,7 +55,7 @@ class TestBaseModelDocs(unittest.TestCase):
 
     def test_func_docstrings(self):
         """
-        Test for the presence of docstring in BaseModel methods
+        Test for the presence of docstrings in BaseModel methods
         """
         for func in self.base_funcs:
             with self.subTest(function=func):
@@ -74,7 +74,6 @@ class TestBaseModel(unittest.TestCase):
     """
     Test the BaseModel class
     """
-
     def test_instantiation(self):
         """
         Test that object is correctly created
@@ -177,7 +176,7 @@ class TestBaseModel(unittest.TestCase):
     def test_save(self, mock_storage):
         """
         Test that save method updates `updated_at` and calls
-        storage.save`
+        `storage.save`
         """
         inst = BaseModel()
         old_created_at = inst.created_at
