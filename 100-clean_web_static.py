@@ -4,7 +4,7 @@ Fabric script (based on the file 3-deploy_web_static.py)
 that deletes out-of-date archives, using the function do_clean:
 """
 import os
-from fabric.api import env, lcd, cd, run
+from fabric.api import env, lcd, cd, run, local
 
 env.hosts = ["204.236.240.97", "54.237.108.98"]
 
@@ -19,9 +19,9 @@ def do_clean(number=0):
     number = 1 if int(number) == 0 else int(number)
 
     archives = sorted(os.listdir("versions"))
-    [archives.pop() for arch_num in range(number)]
+    [archives.pop() for j in range(number)]
     with lcd("versions"):
-        [locals("rm ./{}".format(a)) for a in archives]
+        [local("rm ./{}".format(a)) for a in archives]
 
     with cd("/data/web_static/releases"):
         archives = run("ls -tr").split()
