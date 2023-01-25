@@ -15,10 +15,10 @@ def do_pack():
     Pack files tgz to archive
     """
     try:
-        date = datetime.now().strftime("%Y%M%D%H%M%S")
+        date = datetime.now().strftime("%Y%m%d%H%M%S")
         if isdir("versions") is False:
-            lacal("mkdir versions")
-        file_name = "versions/web_static_{}".format(date)
+            local("mkdir versions")
+        file_name = "versions/web_static_{}.tgz".format(date)
         local("tar -cvzf {} web_static".format(file_name))
         return file_name
     except BaseException:
