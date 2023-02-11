@@ -63,9 +63,9 @@ def oddEven(n):
     Number: n is even|odd
     """
     if n % 2 == 0:
-        number = "even"
+        number = 'even'
     else:
-        number = "odd"
+        number = 'odd'
     return render_template('6-number_odd_or_even.html', n=n,
                            number=number)
 
